@@ -21,8 +21,8 @@ Napit toimivat addEventListenerin kautta.
 Jos käyttäjä poistuu sivulta, edellisellä kerralla tekemättä jääneet asiat pysyvät listalla ja tulevat 
 näkyviin seuraavalla käynnillä (funktio haeTiedot). Vaatii jatkokehitystä, että myös edellisen kerran yliviivaukset tulisivat näkyviin.
 
-Tehtävää tuli jumpattua monta päivää ja aloitin sen kolme kertaa alusta koska en saanut sitä toimimaan haluamallani tavalla. 
-Lopullinen tuotos on yhä turhan vaikeasti tehty, erityisesti ongelmia tuotti tallennus, tallennettujen tietojen hakeminen ja
+Tehtävää tuli jumpattua monta päivää ja aloitin sen kolme kertaa alusta, koska en saanut sitä toimimaan haluamallani tavalla. 
+Lopullinen tuotos on yhä turhan vaikeasti tehty. Erityisesti ongelmia tuotti tallennus, tallennettujen tietojen hakeminen ja
 poistaminen. Ongelma aiheutui avain-arvo-parien avaimista, joiden nimeäminen ei toimi kunnolla: eivät ole riittävän uniikkeja.
 Neljättä päivää jumpatessa päätin kysäistä apua ChatGPT:ltä. Eipä tuokaan heti (tai edes myöhemmin) osannut ratkaista vastaan tulleita ongelmia, 
 mutta ainakin kehityin kysymyksen muotoilussa ja tarkentamisessa sekä lisäkysymysten esittämisessä.
