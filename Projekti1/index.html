@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prjoketi1</title>
+    <link rel="stylesheet" href="styles/styles.css">
+
+</head>
+<body onload="haeTiedot()">
+
+     
+
+<form>
+    <fieldset>  
+    <legend>Mitä tänään tehdään</legend>
+    <div id="lappu"> 
+
+        <table id="lista">   <!-- tähän tulee lisätyt rivit -->
+            <tr><td></td></tr>
+        </table>
+
+        <table> <!-- täällä on input ja buttonit -->
+            <tr>
+                <td id="lisays"><input type="text" id="tieto" placeholder="mitä pitäisi tehdä.."></td>
+            </tr>
+        <br>
+            <tr >
+                <td id="laske"> 
+                <input type="button" id="lisaa" value="Lisää rivi"> 
+                <input type="button" id="poista"  value="Poista valitut"> 
+                </td>
+            </tr>
+        </table>
+
+    </div>
+    </fieldset> 
+</form>
+
+<p id="testi"></p> <!-- kaikenmoiseen testaukseen ja kokeiluun -->
+
+
+
+
+
+<script src="scripts/scripts.js"></script>
+</body>
+</html>
