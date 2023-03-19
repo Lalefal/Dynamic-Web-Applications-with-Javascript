@@ -21,16 +21,18 @@ function lisaaRivi() { //tsekataan, että sana on vähintään 2 merkkiä, lisä
 
         // tietojen tallennus. Ystäväni ChatGPT auttoi tämän tekemisessä
         var tallenna = JSON.parse(localStorage.getItem('tallenna')) || {}; // haetaan tallennusobjekti local storagessa, tai luodaan uusi tyhjä objekti
-        // var avain = Object.keys(tallenna).length + 1; // lasketaan objektin pituus ja lisätään yksi, jolloin saadaan uusi, uniikki arvo avaimelle
-        //tallenna[avain] = tekstikentta.value; // lisätään uusi avain ja sen arvo objektiin
-//tähän tarvitsisi lisätä tarkitus: montako numeroa on jo käytössä, siihen +1.
-//nyt tallentaa aiempien tietojen päälle jos sivu ladataan uudelleen     
-var avaimet = Object.keys(tallenna);
-var uusiAvain = avaimet.length > 0 ? parseInt(avaimet[avaimet.length-1])+1 : 1; // lasketaan uusi avain
-tallenna[uusiAvain] = tekstikentta.value; // lisätään uusi avain ja sen arvo objektiin
-//tämä ratkaisi tallennusongelman, mutta rivien poisto ei toimi kunnolla
-//rivit saa poistettua vain, jos poistamisen aloittaa listan viimeisestä rivistä
-//jos poistaa alusta tai keskeltä, poistaminen ei enää toimi
+        
+            // var avain = Object.keys(tallenna).length + 1; // lasketaan objektin pituus ja lisätään yksi, jolloin saadaan uusi, uniikki arvo avaimelle
+            //tallenna[avain] = tekstikentta.value; // lisätään uusi avain ja sen arvo objektiin
+        //tähän tarvitsisi lisätä tarkitus: montako numeroa on jo käytössä, siihen +1.
+        //nyt tallentaa aiempien tietojen päälle jos sivu ladataan uudelleen   
+        
+             var avaimet = Object.keys(tallenna);
+             var uusiAvain = avaimet.length > 0 ? parseInt(avaimet[avaimet.length-1])+1 : 1; // lasketaan uusi avain
+             tallenna[uusiAvain] = tekstikentta.value; // lisätään uusi avain ja sen arvo objektiin
+        //tämä ratkaisi tallennusongelman, mutta rivien poisto ei toimi kunnolla
+        //rivit saa poistettua vain, jos poistamisen aloittaa listan viimeisestä rivistä
+        //jos poistaa alusta tai keskeltä, poistaminen ei enää toimi
 
         localStorage.setItem('tallenna', JSON.stringify(tallenna)); // tallennetaan objekti local storageen
 
