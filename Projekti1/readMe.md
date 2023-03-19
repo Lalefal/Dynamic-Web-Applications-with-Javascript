@@ -5,6 +5,7 @@ Linkki Netlifyihin
 https://to00bl10projekti1.netlify.app/
 
 Mitä tuli tehtyä
+
 Melkein toimiva todo-lista. Listalle syötetään uusi tieto listan alareunassa olevassa input fieldissä.
 "Lisää rivi"-nappia painaessa funktio lisääRivi
   1. Tarkistaa, että syöte on vähintään 2 merkkiä
