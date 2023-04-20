@@ -68,7 +68,7 @@ function asemaHaku(){
             asema = "RKL"
             break;
         case "korso":
-            asema = "KRO"
+            asema = "KRS"
             break;
         case "savio":
             asema = "SAV"
