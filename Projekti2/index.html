@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Bootstrap-pohja kopioitu w3schoolilta 
+    https://www.w3schools.com/bootstrap/tryit.asp?filename=trybs_temp_webpage&stacked=h-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <!-- Ja modattu myös itse -->
+    <link rel="stylesheet" href="styles/styles.css">
+
+    <title>Aikatauluhaku Hki-Kerava</title>
+
+</head>
+<body>
+
+    <!--Seuraavaan versioon: 
+        Valitse päivä-nappula tai valitse aika-nappula.
+        Jos juna ei aikataulussa, oikean ajan päivittyminen.
+        Datalist input-fieldin levyiseksi (todnäk käytössä oleva Bootstrap estää onnistumisen tässä versiossa). 
+        Määränpää valinta Hki / vastakkainen suunta / kaikki suunnat -->
+
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="collapse navbar-collapse" id="myNavbar">
+        <h2>Aikatauluhaku - Pääradan asemat Hki - Kerava</h2>
+        </div>
+    </div>
+  </nav>
+    
+  <div class="container-fluid text-center">    
+    <div class="row content">
+      <div class="col-sm-2 sidenav">        
+      </div>
+
+      <div class="col-sm-8 text-left"> 
+        <h2>Minne mennään?</h2>
+
+        <div class="well" >
+
+            <label for="asema">Valitse asema:</label>
+            <br>
+            <select name="valinta" id="asema">
+                <option value="Valitse">Valitse</option>
+                <option value="HKI">Helsinki</option>
+                <option value="PSL">Pasila</option>
+                <option value="KÄP">Käpylä</option> 
+                <option value="OLK">Oulunkylä</option> 
+                <option value="PMK">Pukinmäki</option> 
+                <option value="ML">Malmi</option> 
+                <option value="TNA">Tapanila</option> 
+                <option value="PLA">Puistola</option> 
+                <option value="TKL">Tikkurila</option> 
+                <option value="HKH">Hiekkaharju</option>            
+                <option value="KVY">Koivukylä</option> 
+                <option value="RKL">Rekola</option>             
+                <option value="KRO">Korso</option> 
+                <option value="SAV">Savio</option> 
+                <option value="KE">Kerava</option>            
+            </select>
+            
+        </div>
+        <div class="well">            
+            
+            <label for="asemaHaku">Tai kirjoita aseman nimi:</label><br>
+            <input id="asemaHaku" list="asemalista"  name="asemalista" placeholder="Kirjoita aseman nimi" required>
+            
+            <datalist id="asemalista" > 
+                <option value="Helsinki">
+                  <option value="Hesa">
+                  <option value="Keskusta"> 
+                <option value="Pasila">
+                <option value="Käpylä">
+                <option value="Oulunkylä">
+                  <option value="Ogeli">
+                <option value="Pukinmäki">
+                  <option value="Puksu">
+                <option value="Malmi">
+                <option value="Tapanila">
+                <option value="Puistola">
+                <option value="Tikkurila">
+                  <option value="Tiksi">
+                <option value="Hiekkaharju">
+                <option value="Koivukylä">
+                  <option value="Koivis">
+                <option value="Rekola">
+                <option value="Korso">
+                <option value="Savio">
+                <option value="Kerava">
+            </datalist>
+            
+            <button id="haku">Hae</button>
+
+        </div>
+
+        <div class="well" id="palkki">             
+        <div id="info">Kohta lähdetään!</div>
+        </div>
+      </div>
+
+      <div class="col-sm-2 sidenav">
+      </div>
+    </div>
+  </div>
+  
+  <footer class="container-fluid text-center">
+    <p>Hyvää matkaa!</p>
+    <p>Liikennetietojen lähde <a href="https://www.digitraffic.fi" target="_blank">Fintraffic</a> Lisenssi CC 4.0 BY</p>
+  </footer>
+
+  <script src="scripts/scripts.js"></script>
+</body>
+</html>
