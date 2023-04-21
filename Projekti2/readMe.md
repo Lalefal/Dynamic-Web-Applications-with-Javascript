@@ -28,6 +28,9 @@ Kaikista vaikein oli saada haettua näytettävien junian pääteasemat:<br>
 
 [ {0[ {0}{1}{...}{**68:tämä**} ]} {1[ {0}{1}{...}{**64:tämä**} ]} {...[ {0}{1}{...}{**68: tämä**} ]} {104[ {0}{1}{...}{**68: tämä**} ]} ]
 
+<br><br>
+Mutta onnistuin ja olen ylpeä lopputuloksesta :)
+
 <br><br><br>
 Muita huomioita:
 - Yritin kauan muokata input fieldin alle tulevaa datalistiä saman levyiseksi kuin input field. En saanut
