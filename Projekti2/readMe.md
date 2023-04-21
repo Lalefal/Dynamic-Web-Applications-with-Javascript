@@ -11,10 +11,10 @@ Mitä tuli tehtyä
 
 
 Lähteet
-- luentomateriaalit ja workshop-tehtävät
-- w3schools.com
-- <a href="https://www.digitraffic.fi/rautatieliikenne/" target="_blank"> Digitraffic: Rautatieliikenne</a> 
-- <a href="https://www.w3schools.com/bootstrap/tryit.asp?filename=trybs_temp_webpage&stacked=h" target="_blank"> Ulkoasu on tehty w3schoolin templaten avulla</a> 
+- Luentomateriaalit ja workshop-tehtävät
+- <a href="https://www.w3schools.com/js/default.asp" target="_blank">w3schools.com</a> 
+- Digitraffic: <a href="https://www.digitraffic.fi/rautatieliikenne/" target="_blank">Rautatieliikenne</a> 
+- Ulkoasu on tehty w3schoolin <a href="https://www.w3schools.com/bootstrap/tryit.asp?filename=trybs_temp_webpage&stacked=h" target="_blank">templaten</a> avulla
 
     
 
