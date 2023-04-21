@@ -2,7 +2,7 @@ Web-sovellusten kehittäminen Javascriptillä TO00BL10-3018
 
 Projekti 2a, Aikatauluhaku
 
-Linkki Netlifyihin https://lalefal-aikatauluhaku.netlify.app/
+Linkki  <a href="https://www.digitraffic.fi](https://lalefal-aikatauluhaku.netlify.app/" target="_blank">Netlifyihin</a>
 
 Mitä tuli tehtyä
 
