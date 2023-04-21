@@ -22,7 +22,7 @@ Käyttäjä voi valita lähtöaseman alasvetovalikosta tai kirjoittamalla aseman
 <br>
 Haastavinta tehtävässä oli päästä käsiksi haluttuun tietoon: saatu objekti on muodossa<br><br>
 
-[ {0[{0}{1}{..}{68}]} {1[{0}{1}{..}{64}]} {..[{0}{1}{..}{68}]} {104[{0}{1}{..}{68}]} ]
+[ {0[ {0}{1}{..}{68} ]} {1[ {0}{1}{..}{64} ]} {..[ {0}{1}{..}{68} ]} {104[ {0}{1}{..}{68} ]} ]
 <br><br><br>
 Kaikista vaikein oli saada haettua näytettävien junian pääteasemat:<br>
 
