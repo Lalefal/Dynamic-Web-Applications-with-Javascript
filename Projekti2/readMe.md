@@ -19,19 +19,14 @@ Käyttäjä voi valita lähtöaseman alasvetovalikosta tai kirjoittamalla aseman
  - Jos aseman nimi kirjoitetaan itse, haku käynnistyy painamalla enteriä tai "Hae"-buttonia
  - Jos käyttäjä kirjoittaa aseman, jota ei löydy, asiasta huomautetaan alertilla
  - Haun jälkeen input fieldiin tulee place holderiksi haetun aseman nimi
-
-Haastavinta tehtävässä oli päästä käsiksi haluttuun tietoon: saatu objekti on muodossa
-
-[ {0[{0}{1}{..}{68}]} {1[{0}{1}{..}{64}]} {..[{0}{1}{..}{68}]} {104[{0}{1}{..}{68}]} ]
-
 <br>
+Haastavinta tehtävässä oli päästä käsiksi haluttuun tietoon: saatu objekti on muodossa<br>
+[ {0[{0}{1}{..}{68}]} {1[{0}{1}{..}{64}]} {..[{0}{1}{..}{68}]} {104[{0}{1}{..}{68}]} ]
+<br><br>
+Kaikista vaikein oli saada haettua näytettävien junian pääteasemat:<br>
+[ {0[{0}{1}{..}{**68:tämä**}]} {1[{0}{1}{..}{**64:tämä**}]} {..[{0}{1}{..}{**68: tämä**}]} {104[{0}{1}{..}{**68: tämä**}]} ]
 
-
-Kaikista vaikein oli saada haettua näytettävien junian pääteasemat:
-
-[ {0[{0}{1}{..}{68:**tämä**}]} {1[{0}{1}{..}{64:**tämä**}]} {..[{0}{1}{..}{**68: tämä**}]} {104[{0}{1}{..}{**68: tämä**}]} ]
-
-
+<br><br>
 Muita huomioita:
 - Yritin kauan muokata input fieldin alle tulevaa datalistiä saman levyiseksi kuin input field. En saanut
   ominaisuutta toimimaan kunnolla, joten luovuin siitä. Jälkeenpäin huomasin, että datalistin sijainti riippuu
