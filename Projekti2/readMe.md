@@ -29,9 +29,9 @@ Kaikista vaikein oli saada haettua näytettävien junian pääteasemat:<br>
 [ {0[ {0}{1}{...}{**68:tämä**} ]} {1[ {0}{1}{...}{**64:tämä**} ]} {...[ {0}{1}{...}{**68: tämä**} ]} {104[ {0}{1}{...}{**68: tämä**} ]} ]
 
 <br><br>
-Mutta onnistuin ja olen ylpeä lopputuloksesta :)
+Usean päivän yrityksen ja erehdyksen kautta sain valittua oikeat tiedot näytettäväksi ja olen oikein tyytyväinen lopputulokseen :)
 
-<br><br><br>
+<br><br>
 Muita huomioita:
 - Yritin kauan muokata input fieldin alle tulevaa datalistiä saman levyiseksi kuin input field. En saanut
   ominaisuutta toimimaan kunnolla, joten luovuin siitä. Jälkeenpäin huomasin, että datalistin sijainti riippuu
