@@ -9,11 +9,18 @@ Mitä tuli tehtyä
 Sovellus, jossa käyttäjä valitsee lähtöaseman ja saa näkyviin valitulta asemalta lähtevät junat:
    - Junan kirjain
    - Junan lähtöraide
-   - Junan lähtöaika
+   - Junan lähtöaika (nykyisestä ajasta eteenpäin)
    - Junan määränpää
  
 Käyttäjä voi valita lähtöaseman alasvetovalikosta tai kirjoittamalla aseman nimen itse.
- - Tein ensin alasvetovalikkovaihtoehdon. Kun sain sen toimimaan, tein myös input-fieldvaihtoehdon.
+ - Tein ensin alasvetovalikkovaihtoehdon. Kun sain sen toimimaan, tein myös input field-vaihtoehdon
+ - Valittavana on pääradan asemat
+ - Jos asema valitaan alasvetovalikosta, haku käynnistyy automaattisesti
+ - Jos aseman nimi kirjoitetaan itse, haku käynnistyy painamalla enteriä tai "Hae"-buttonia
+ - Jos käyttäjä kirjoittaa aseman, jota ei löydy, asiasta huomautetaan alertilla
+ - Haun jälkeen input fieldiin tulee place holderiksi haetun aseman nimi
+
+Haastavinta tehtävässä oli päästä käsiksi haluttuun tietoon. Kaikista vaikein oli saada haettua näytettävien junian pääteasemat. 
 
 
 
@@ -28,7 +35,6 @@ Lähteet
 - <a href="https://www.w3schools.com/js/default.asp" target="_blank">w3schools.com</a> 
 - Digitraffic: <a href="https://www.digitraffic.fi/rautatieliikenne/" target="_blank">Rautatieliikenne</a> 
 - Ulkoasu on tehty w3schoolin <a href="https://www.w3schools.com/bootstrap/tryit.asp?filename=trybs_temp_webpage&stacked=h" target="_blank">templaten</a> avulla
-
-    
+- Välillä tuli juteltua ChatGPT:n kanssa    
 
 Liikennetietojen lähde <a href="https://www.digitraffic.fi" target="_blank">Fintraffic</a> Lisenssi CC 4.0 BY
