@@ -27,8 +27,8 @@ Haastavinta tehtävässä oli päästä käsiksi haluttuun tietoon. Kaikista vai
 Muita huomioita:
 - Yritin kauan muokata input fieldin alle tulevaa datalistiä saman levyiseksi kuin input field. En saanut
   ominaisuutta toimimaan kunnolla, joten luovuin siitä. Jälkeenpäin huomasin, että datalistin sijainti riippuu
-  käytettävästä sijainnista: Edgessä se menee itsestään input fieldin alle samanlevyisenä kuin input field. Chromessa
-  datalist näkyy kapeana listana input fieldin vasemmassa listassa.
+  käytettävästä selaimesta: Edgessä se menee itsestään input fieldin alle samanlevyisenä kuin input field. Chromessa
+  datalist näkyy kapeana listana input fieldin vasemmassa listassa (tätä en saanut muokattua haluamakseni).
 
 Lähteet
 - Luentomateriaalit ja workshop-tehtävät
