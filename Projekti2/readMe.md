@@ -24,6 +24,8 @@ Haastavinta tehtävässä oli päästä käsiksi haluttuun tietoon: saatu objekt
 
 [ {0[{0}{1}{..}{68}]} {1[{0}{1}{..}{64}]} {..[{0}{1}{..}{68}]} {104[{0}{1}{..}{68}]} ]
 
+<br>
+
 
 Kaikista vaikein oli saada haettua näytettävien junian pääteasemat:
 
