@@ -20,8 +20,11 @@ Käyttäjä voi valita lähtöaseman alasvetovalikosta tai kirjoittamalla aseman
  - Jos käyttäjä kirjoittaa aseman, jota ei löydy, asiasta huomautetaan alertilla
  - Haun jälkeen input fieldiin tulee place holderiksi haetun aseman nimi
 
-Haastavinta tehtävässä oli päästä käsiksi haluttuun tietoon. Kaikista vaikein oli saada haettua näytettävien junian pääteasemat. 
+Haastavinta tehtävässä oli päästä käsiksi haluttuun tietoon: saatu objekti on muodossa
+[ {0[{0}{1}{..}{68}]} {1[{0}{1}{..}{64}]} {2[{0}{1}{..}{68}]} {104[{0}{1}{..}{68}]} ]
 
+Kaikista vaikein oli saada haettua näytettävien junian pääteasemat. 
+[ {0[{0}{1}{..}{68:**tämä**}]} {1[{0}{1}{..}{64:**tämä**}]} {2[{0}{1}{..}{**68**}]} {104[{0}{1}{..}{**68**}]} ]
 
 
 Muita huomioita:
