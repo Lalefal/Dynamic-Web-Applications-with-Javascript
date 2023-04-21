@@ -2,13 +2,26 @@ Web-sovellusten kehittäminen Javascriptillä TO00BL10-3018
 
 Projekti 2a, Aikatauluhaku
 
-Linkki  <a href="https://lalefal-aikatauluhaku.netlify.app/" target="_blank">Netlifyihin</a>
+Linkki <a href="https://lalefal-aikatauluhaku.netlify.app/" target="_blank">Netlifyihin</a>
 
 Mitä tuli tehtyä
 
+Sovellus, jossa käyttäjä valitsee lähtöaseman ja saa näkyviin valitulta asemalta lähtevät junat:
+   - Junan kirjain
+   - Junan lähtöraide
+   - Junan lähtöaika
+   - Junan määränpää
+ 
+Käyttäjä voi valita lähtöaseman alasvetovalikosta tai kirjoittamalla aseman nimen itse.
+ - Tein ensin alasvetovalikkovaihtoehdon. Kun sain sen toimimaan, tein myös input-fieldvaihtoehdon.
 
 
 
+Muita huomioita:
+- Yritin kauan muokata input fieldin alle tulevaa datalistiä saman levyiseksi kuin input field. En saanut
+  ominaisuutta toimimaan kunnolla, joten luovuin siitä. Jälkeenpäin huomasin, että datalistin sijainti riippuu
+  käytettävästä sijainnista: Edgessä se menee itsestään input fieldin alle samanlevyisenä kuin input field. Chromessa
+  datalist näkyy kapeana listana input fieldin vasemmassa listassa.
 
 Lähteet
 - Luentomateriaalit ja workshop-tehtävät
