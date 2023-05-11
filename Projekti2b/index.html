@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Tähän osoite kirjastoon-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script> 
+<script src="scripts/scripts.js"></script>
+<!-- <link rel="stylesheet" href="styles/styles.css"> -->
+<style>
+#info {
+  display: none;
+}
+#muualle_input{
+  display: none;
+}
+</style>
+<title>eka 2b</title>
+</head>
+<body>
+
+<form id="hakuForm">
+  <fieldset>
+    <legend>Mistä lähdetään:</legend>
+<div> 
+  <label for="kirjoitaAsema">Kirjoita aseman nimi:</label><br>
+  <input id="kirjoitaAsema" list="asemalista"  name="asemalista" placeholder="Kirjoita aseman nimi" required>
+  <datalist id="asemalista">   </datalist>
+</div>
+
+<div> 
+  <label for="suunta">Valitse suunta:</label><br>
+    <input type="radio" id="kaikki" name="suunta" value="" checked>
+    <label for="kaikki">Kaikki</label>
+
+    <input type="radio" id="hki" name="suunta" value="HKI">
+    <label for="hki">Helsinkiin</label>
+<br>
+  <input type="radio" id="muualle" name="suunta">
+  <label for="muualle" id="muualle_label">Kirjoita haluttu suunta</label> 
+  <input  id="muualle_input" name="muualle_input" list="asemalista"  name="asemalista" placeholder="Kirjoita haluttu suunta">
+  <datalist id="asemalista">   </datalist>
+</div>
+<div>
+  <input type="submit" value="Hae">
+</div>
+</fieldset>
+</form>
+
+<div id="info"></div>
+
+
+</body>
+</html>
