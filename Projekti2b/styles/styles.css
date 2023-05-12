@@ -2,72 +2,60 @@ body {
 	font-family: Arial, sans-serif;
 }
 
-/* Remove the navbar's default margin-bottom and rounded borders */ 
-.navbar {
+ 
+ 
+ /* Remove the navbar's default margin-bottom and rounded borders */ 
+ .navbar {
   margin-bottom: 0;
-  border-radius: 0;
+  padding-left: 10px;
   color: rgb(95, 93, 93);
-
 }
 
 /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
-.row.content {
-  height: 600px;
-}
+.row.content {height: 900px}
 
 /* Set gray background color and 100% height */
 .sidenav {
-background-color: #f1f1f1;     
-height: 100%;
+  padding-top: 20px;
+  background-color: #f1f1f1;
+  height: 100%;
 }
 
 /* Set black background color, white text and some padding */
 footer {
   background-color: #555;
-    /*  #4c795f; */
   color: white;
   padding: 15px;
 }
 
 /* On small screens, set height to 'auto' for sidenav and grid */
 @media screen and (max-width: 767px) {
-.sidenav {
-  height: auto;
-  padding: 15px;
-}
-.row.content {height:auto;} 
-}
-
-#asemaHaku {
-  font-size: 15px;
-  padding: 5px;
-  height: 30px;
-  width: 60%;
-  border: 1px solid;
-  outline: none;
-  border-radius: 5px;
-  margin-bottom: 10px;
-}
-  
-
-#asema {
-  font-size: 15px;
-  padding: 5px;
-  height: 30px;
-  width: 60%;
-
-  outline: none;
-  border-radius: 5px;
+  .sidenav {
+    height: auto;
+    padding: 15px;
+  }
+  .row.content {height:auto;} 
 }
 
-#haku {
-  margin-left: 15px;
+/* omat tänne */
+
+#info {
+  display: none;
 }
+#muualle_input{
+  display: none;
+
+}
+
 
 #palkki {
-    height: 250px;
-    overflow-y: auto;
-  }
+  height: 500px;
+  overflow-y: auto;
+}
+
+.divit {
+  padding: 10px;
+}
 
 /* Kivasti kopioin nämä ws08-tehtävästä */
 table {
@@ -93,9 +81,4 @@ tr:nth-child(even) {
 td {
   height: 40px;
   vertical-align: middle;
-}
-datalist {
-  max-height: 10rem;
-  overflow-y: auto
-  
 }
