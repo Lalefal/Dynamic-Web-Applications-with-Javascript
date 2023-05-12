@@ -138,7 +138,7 @@ var headerRow = $("<tr>").appendTo(table);
     $("<td>").text(juna.juna).appendTo(row);
     $("<td>").text(juna.raide).appendTo(row);
     $("<td>").text(juna.aika).appendTo(row);
-    $("<td>").text(juna.aika2).appendTo(row).css('color', juna.aika2 === 'true' ? 'red' : 'inherit');
+    $("<td>").text(juna.aika2).appendTo(row).css('color','red');
     $("<td>").text(juna.minne).appendTo(row);
     //$("<td>").text(juna.numero).appendTo(row);
   });
