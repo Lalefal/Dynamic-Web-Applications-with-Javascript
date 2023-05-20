@@ -35,6 +35,9 @@ footer {
     padding: 15px;
   }
   .row.content {height:auto;} 
+#kirjoitaAsema, #muualle_input {
+    width: 90%;
+  }
 }
 
 /* omat tänne */
