@@ -25,23 +25,60 @@ function fetchAsemat() { //haetaan tiedot juna-asemien nimistä ja lyhenteistä,
     });
 }
 
+
 //haetaan halutun aseman aikataulut käyttäjän antamien hakuehtojen mukaan
+
 function haeTiedot(osoite, asema) {
+
+  var startTime = new Date(); // tallennetaan hakemisen aloitusaika
+
+    // Tsekataan hakemisen kesto 2 sekunnin jälkeen
+    var timeout1 = setTimeout(function() {
+      var currentTime = new Date();
+      var elapsedTime = currentTime - startTime; // lasketaan kulunut aika
+      if (elapsedTime >= 2000) { 
+        $("#info").append($("<span>").text("Hakuasi etsitään...")).slideDown(); // lisätään span viesti diviin #info
+      }
+    }, 2000);  
+    // Tsekataan hakemisen kesto 10 sekunnin jälkeen
+    var timeout2 = setTimeout(function() {
+      var currentTime = new Date();
+      var elapsedTime = currentTime - startTime; 
+      if (elapsedTime >= 10000) { 
+        $("#info").append($("<span>").text("Haku yhä kesken...")).slideDown(); // lisätään span viesti diviin #info
+      }
+    }, 10000);
+
   fetch ("https://rata.digitraffic.fi/api/v1/live-trains/station/" + osoite)
     .then(function(response) {
       return response.json();
     })
     .then(function(data) {
+
+      clearTimeout(timeout1); // perutaan aikaraja 2 sekunnin jälkeen
+      clearTimeout(timeout2); // perutaan aikaraja 10 sekunnin jälkeen
+      $("#info span").remove(); // poistetaan aiemmin lisätyt spanit
       console.log(data);
       naytaTiedot(data, asema);
+
+    }) //;
+    .catch(function(error) {
+      clearTimeout(timeout1); // perutaan aikaraja 2 sekunnin jälkeen
+      clearTimeout(timeout2); // perutaan aikaraja 10 sekunnin jälkeen
+      $("#info span").remove(); // poistetaan aiemmin lisätyt spanit
+      $("#info").append($("<span>").text("Hakutulosten hakemisessa tapahtui virhe.")).slideDown(); // lisätään span viesti diviin #info
     });
 }
 
 //valitaan, mitä näytetään
 function naytaTiedot(data, asema) {
+
   var lahtoajat = [];
   var nyt = new Date();
   console.log(lahtoajat);
+
+ 
+
   $.each(data, function(i, paketti) {
     var juna = "";
     var raide = "";
@@ -124,29 +161,35 @@ var fromLen = ["LNÄ", "HKL", "TKL", "PLA", "TNA", "ML", "PMK", "OLK", "KÄP"];
 
 
   //luodaan table
-var table = $("<table>");
-var headerRow = $("<tr>").appendTo(table);
-  $("<th>").text("Juna").appendTo(headerRow);
-  $("<th>").text("Raide").appendTo(headerRow);
-  $("<th>").text("Aika").appendTo(headerRow);
-  $("<th>").text("").appendTo(headerRow);
-  $("<th>").text("Minne").appendTo(headerRow);
+
+if (lahtoajat.length > 0) { //ajan tarkistus tänne?
+  var table = $("<table>");
+  var headerRow = $("<tr>").appendTo(table);
+    $("<th>").text("Juna").appendTo(headerRow);
+    $("<th>").text("Raide").appendTo(headerRow);
+    $("<th>").text("Aika").appendTo(headerRow);
+    $("<th>").text("").appendTo(headerRow);
+    $("<th>").text("Minne").appendTo(headerRow).css('text-align', 'left');
 
 
-  $.each(lahtoajat, function(index, juna) {
-    var row = $("<tr>").appendTo(table);
-    $("<td>").text(juna.juna).appendTo(row);
-    $("<td>").text(juna.raide).appendTo(row);
-    $("<td>").text(juna.aika).appendTo(row);
-    $("<td>").text(juna.aika2).appendTo(row).css('color','red');
-    $("<td>").text(juna.minne).appendTo(row);
-    //$("<td>").text(juna.numero).appendTo(row);
-  });
+    $.each(lahtoajat, function(index, juna) {
+      var row = $("<tr>").appendTo(table);
+      $("<td>").text(juna.juna).appendTo(row);
+      $("<td>").text(juna.raide).appendTo(row);
+      $("<td>").text(juna.aika).appendTo(row);
+      $("<td>").text(juna.aika2).appendTo(row).css({'color':'red','text-align':'left'});
+      $("<td>").text(juna.minne).appendTo(row).css('text-align', 'left');
+      //$("<td>").text(juna.numero).appendTo(row);
 
-        
-$("#info").append(table).slideDown("slow");  //näytetään aikatauluTable
-      console.log("Valmis!"); 
+    });
 
+          
+  $("#info").append(table).slideDown("slow");  //näytetään aikatauluTable
+        console.log("Valmis!"); 
+   } else {
+     $("#info").append($("<span>").text("Antamillasi hakuehdoilla ei löytynyt tuloksia. Tarkista, että lähtöasema ja määränpää ovat saman junaradan varrella.")).slideDown(); // lisätään span viesti diviin #info
+     resultFound = true;
+   }
 
       
 $("tr").on("mouseenter", function() {
@@ -155,12 +198,12 @@ $("tr").on("mouseenter", function() {
    $(this).css("background-color", "");
  });
 
+//tyhjentää hakusana-inputin ja laittaa placeholderiksi edellisen haun sanan
+// var hakuSana = $("#kirjoitaAsema").val();
+// $("#kirjoitaAsema").val("").attr("placeholder", hakuSana);
 
-var hakuSana = $("#kirjoitaAsema").val();
-$("#kirjoitaAsema").val("").attr("placeholder", hakuSana);
-
-var hakuSana2 = $("#muualle_input").val();
-$("#muualle_input").val("").attr("placeholder", hakuSana2);
+// var hakuSana2 = $("#muualle_input").val();
+// $("#muualle_input").val("").attr("placeholder", hakuSana2);
 
     }
 
@@ -171,8 +214,12 @@ $(document).ready(function() {
 
   fetchAsemat();
 
+$('#kirjoitaAsema').val(''); //tyhjennetään edellinen haku, mikäli sivu päivitetään
+$('#muualle_input').val('');
+  
+
 $("#muualle").click(function(){ // inputboksi näkyviin
-  $("#muualle_input").slideToggle("slow");
+  $("#muualle_input").slideToggle();
 
 });
 
@@ -187,9 +234,10 @@ $("#hakuForm").submit(function(event) { //aloitetaan hakeminen
   var arvo = ekaArvo.charAt(0).toUpperCase() + ekaArvo.slice(1).toLowerCase(); //laitetaan oikeaan kirjoitusmuotoon
   if (asemat.hasOwnProperty(arvo)) { //haetaan aseman nimeä vastaava stationShortCode objektista 'asemat'
      asema = asemat[arvo];  
-  } else {
-    alert("Asemaa ei löydy");
+    } else {
+     alert("Lähtöasemaa ei löydy");
     }
+
 
   var osoite="";
   var valittuSuunta = '';
@@ -204,8 +252,9 @@ $("#hakuForm").submit(function(event) { //aloitetaan hakeminen
         valittuSuunta =  "/" + asemat[suuntaMuutos];
         osoite = asema + valittuSuunta + "?include_nonstopping=false&limit=50"
       } else {
-        alert("Asemaa ei löydy");
+        alert("Määränpääasemaa ei löydy");
       }
+
   } else {
     valittuSuunta = '';
     osoite = asema + "?departing_trains=150&include_nonstopping=false"

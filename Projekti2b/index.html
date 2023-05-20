@@ -36,28 +36,28 @@
 
     <div class="col-sm-8 text-left"> 
 
-      <h1>Minne mennään</h1>
+      <h2>Minne mennään?</h2>
       <form class="well" id="hakuForm">
         
           
       <div class="divit"> 
         <legend>Valitse lähtöasema:</legend>
         <!-- <label for="kirjoitaAsema">Kirjoita tai valitse</label><br> -->
-        <input id="kirjoitaAsema" list="asemalista"  name="asemalista" placeholder="Kirjoita aseman nimi" required>
+        <input id="kirjoitaAsema" list="asemalista"  name="asemalista" placeholder="Kirjoita lähtöaseman nimi" required>
         <datalist id="asemalista">   </datalist>
       </div>
       
       <div class="divit"> 
-        <legend>Valitse suunta:</legend>
+        <legend>Valitse määränpää:</legend>
         <!-- <label for="suunta">Valitse suunta:</label> -->
           <input type="radio" id="kaikki" name="suunta" value="" checked>
-          <label for="kaikki">Kaikki</label>
+          <label for="kaikki">Näytä kaikki</label>
           <input type="radio" id="hki" name="suunta" value="HKI">
           <label for="hki">Helsinkiin</label><br>
           <input type="radio" id="muualle" name="suunta">
-          <label for="muualle">Kirjoita haluttu suunta</label>    
+          <label for="muualle">Kirjoita määränpää</label>    <br>
         
-        <input  id="muualle_input" name="muualle_input" list="asemalista"  name="asemalista" placeholder="Kirjoita haluttu suunta">
+        <input  id="muualle_input" name="muualle_input" list="asemalista"  name="asemalista" placeholder="Kirjoita määränpään nimi">
         <datalist id="asemalista">   </datalist>
 
       </div>
