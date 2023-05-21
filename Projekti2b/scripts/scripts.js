@@ -2,6 +2,7 @@ var asemat = {};
 //console.log(asemat);
 
 function fetchAsemat() { //haetaan tiedot juna-asemien nimistä ja lyhenteistä, tallennetaan ne objektiin 'asemat'
+
   return fetch("https://rata.digitraffic.fi/api/v1/metadata/stations")
     .then(function(response) {
       return response.json();
@@ -26,8 +27,8 @@ function fetchAsemat() { //haetaan tiedot juna-asemien nimistä ja lyhenteistä,
 }
 
 
-//haetaan halutun aseman aikataulut käyttäjän antamien hakuehtojen mukaan
 
+//haetaan halutun aseman aikataulut käyttäjän antamien hakuehtojen mukaan
 function haeTiedot(osoite, asema) {
 
   var startTime = new Date(); // tallennetaan hakemisen aloitusaika
@@ -49,6 +50,10 @@ function haeTiedot(osoite, asema) {
       }
     }, 10000);
 
+// Simuloi viivästystä 5 sekuntia
+//setTimeout(function() {
+//console.log("Fetch-vastaus viivästyy..."); 
+
   fetch ("https://rata.digitraffic.fi/api/v1/live-trains/station/" + osoite)
     .then(function(response) {
       return response.json();
@@ -68,6 +73,8 @@ function haeTiedot(osoite, asema) {
       $("#info span").remove(); // poistetaan aiemmin lisätyt spanit
       $("#info").append($("<span>").text("Hakutulosten hakemisessa tapahtui virhe.")).slideDown(); // lisätään span viesti diviin #info
     });
+
+// }, 5000); // Simuloi viivästystä 5 sekuntia
 }
 
 //valitaan, mitä näytetään
@@ -76,8 +83,6 @@ function naytaTiedot(data, asema) {
   var lahtoajat = [];
   var nyt = new Date();
   console.log(lahtoajat);
-
- 
 
   $.each(data, function(i, paketti) {
     var juna = "";
@@ -128,16 +133,15 @@ var fromLen = ["LNÄ", "HKL", "TKL", "PLA", "TNA", "ML", "PMK", "OLK", "KÄP"];
         minne = paattari;
         numero = aikatauluRivit.trainNumber;
 
-        console.log("juna, junaNro ja päättäri: " + juna + " " + numero + " " + paattari);
+        //console.log("juna, junaNro ja päättäri: " + juna + " " + numero + " " + paattari);
         
         aika = new Date(aikatauluRivit.scheduledTime);
 
         if (aikatauluRivit.differenceInMinutes != null && aikatauluRivit.differenceInMinutes != 0){ //tsekataan, onko juna myöhässä
-          aika2 = "+" + aikatauluRivit.differenceInMinutes + " min";
+          aika2 = "+" + aikatauluRivit.differenceInMinutes + " min"; //lisätään tieto junan myöhästymisestä
         } else {
           aika2 ="";
         }
-        
         
         if (aika >= nyt) {
           lahtoajat.push({
@@ -161,8 +165,7 @@ var fromLen = ["LNÄ", "HKL", "TKL", "PLA", "TNA", "ML", "PMK", "OLK", "KÄP"];
 
 
   //luodaan table
-
-if (lahtoajat.length > 0) { //ajan tarkistus tänne?
+if (lahtoajat.length > 0) {
   var table = $("<table>");
   var headerRow = $("<tr>").appendTo(table);
     $("<th>").text("Juna").appendTo(headerRow);
@@ -177,27 +180,28 @@ if (lahtoajat.length > 0) { //ajan tarkistus tänne?
       $("<td>").text(juna.juna).appendTo(row);
       $("<td>").text(juna.raide).appendTo(row);
       $("<td>").text(juna.aika).appendTo(row);
-      $("<td>").text(juna.aika2).appendTo(row).css({'color':'red','text-align':'left'});
+      $("<td>").text(juna.aika2).appendTo(row).css({'color':'red','text-align':'left'}); //myöhästyminen näytetään punaisella
       $("<td>").text(juna.minne).appendTo(row).css('text-align', 'left');
       //$("<td>").text(juna.numero).appendTo(row);
-
     });
 
           
   $("#info").append(table).slideDown("slow");  //näytetään aikatauluTable
         console.log("Valmis!"); 
-   } else {
+   } else {     //span, mikäli käyttäjän hakuehdot eivät tuota tulosta
      $("#info").append($("<span>").text("Antamillasi hakuehdoilla ei löytynyt tuloksia. Tarkista, että lähtöasema ja määränpää ovat saman junaradan varrella.")).slideDown(); // lisätään span viesti diviin #info
-     resultFound = true;
+     resultFound = true; 
    }
 
-      
+
 $("tr").on("mouseenter", function() {
-   $(this).css("background-color", "#cccccc");
+   $(this).css("background-color", "#cccccc"); //valittu inbutboksi vaihtaa taustaväriä
   }).on("mouseleave", function() {
    $(this).css("background-color", "");
  });
 
+
+ //alla oleva poistui käytöstä, ei ollut kätevä
 //tyhjentää hakusana-inputin ja laittaa placeholderiksi edellisen haun sanan
 // var hakuSana = $("#kirjoitaAsema").val();
 // $("#kirjoitaAsema").val("").attr("placeholder", hakuSana);
@@ -205,7 +209,7 @@ $("tr").on("mouseenter", function() {
 // var hakuSana2 = $("#muualle_input").val();
 // $("#muualle_input").val("").attr("placeholder", hakuSana2);
 
-    }
+}
 
 
 
@@ -218,16 +222,14 @@ $('#kirjoitaAsema').val(''); //tyhjennetään edellinen haku, mikäli sivu päiv
 $('#muualle_input').val('');
   
 
-$("#muualle").click(function(){ // inputboksi näkyviin
+$("#muualle").click(function(){ // inputboksi näkyviin mikäli käyttäjä valitsee tämän vaihtoehdon
   $("#muualle_input").slideToggle();
 
 });
 
 $("#hakuForm").submit(function(event) { //aloitetaan hakeminen
-  event.preventDefault(); // estää lomakkeen lähettämisen
-  $("#info").empty(); //tyhjennetään edellinen haku
-
-
+  event.preventDefault(); // estää lomakkeen lähettämisen ennenaikaisesti
+  $("#info").empty(); //tyhjennetään edellisen haun aikataulutablen
 
   var asema = ""
   var ekaArvo = $("#kirjoitaAsema").val(); //käyttäjän kirjoittama asema
@@ -237,7 +239,6 @@ $("#hakuForm").submit(function(event) { //aloitetaan hakeminen
     } else {
      alert("Lähtöasemaa ei löydy");
     }
-
 
   var osoite="";
   var valittuSuunta = '';
@@ -263,8 +264,9 @@ $("#hakuForm").submit(function(event) { //aloitetaan hakeminen
     haeTiedot(osoite, asema);
 });
 
+//hover aikataulutablelle
 $("input").focus(function(){
-  $(this).css("background-color", "#f2f2f2");
+  $(this).css("background-color", "#f2f2f2"); 
 });
 $("input").blur(function(){
   $(this).css("background-color", "white");
