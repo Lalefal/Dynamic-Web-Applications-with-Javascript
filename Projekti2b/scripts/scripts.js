@@ -190,7 +190,6 @@ if (lahtoajat.length > 0) {
         console.log("Valmis!"); 
    } else {     //span, mikäli käyttäjän hakuehdot eivät tuota tulosta
      $("#info").append($("<span>").text("Antamillasi hakuehdoilla ei löytynyt tuloksia. Tarkista, että lähtöasema ja määränpää ovat saman junaradan varrella.")).slideDown(); // lisätään span viesti diviin #info
-     resultFound = true; 
    }
 
 
