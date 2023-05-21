@@ -4,7 +4,7 @@ Projekti 2b, Aikatauluhaku jQueryllä
 
 Mitä tuli tehtyä
 
-Sovellus, jolla käyttäjä voi hakea haluamansa juna-aseman aikataulut.
+<a href="https://lalefal-junahaku.netlify.app/" target="_blank">Sovellus</a>, jolla käyttäjä voi hakea haluamansa juna-aseman aikataulut.
 Käyttäjä voi valita 
 - lähtöaseman
 - junan suunnan: kaikki suunnat, Helsinkiin päin menevät tai valittu kohdeaseman.
