@@ -194,7 +194,7 @@ if (lahtoajat.length > 0) {
 
 
 $("tr").on("mouseenter", function() {
-   $(this).css("background-color", "#cccccc"); //valittu inbutboksi vaihtaa taustaväriä
+   $(this).css("background-color", "#cccccc"); //valittu inputfield vaihtaa taustaväriä
   }).on("mouseleave", function() {
    $(this).css("background-color", "");
  });
