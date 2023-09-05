@@ -1,4 +1,4 @@
-# Dynamic-Web-Applications-with-Javascript
+# Dynamic Web Applications with Javascript
 Assigments of Dynamic Web Applications with Javascript - course
 
 
