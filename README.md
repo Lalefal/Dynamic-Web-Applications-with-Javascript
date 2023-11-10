@@ -2,9 +2,9 @@
 Assigments of Dynamic Web Applications with Javascript - course
 
 
-Project 2b <a href="https://lalefal-aikatauluhaku.netlify.app/"> Train schedule search</a>
+Project 2b <a href="https://lalefal-junahaku.netlify.app/"> Train schedule search</a>
 
-Project 2a <a href="https://lalefal-junahaku.netlify.app/"> Train schedule search Helsinki-Kerava</a>
+Project 2a <a href="https://lalefal-aikatauluhaku.netlify.app/"> Train schedule search Helsinki-Kerava</a>
 
 Project 1 <a href="https://to00bl10projekti1.netlify.app/"> ToDo List</a>
 
