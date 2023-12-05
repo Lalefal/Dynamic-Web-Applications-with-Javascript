@@ -2,11 +2,11 @@
 Assigments of Dynamic Web Applications with Javascript - course
 
 
-Repo [Project 2b](https://github.com/Lalefal/Dynamic-Web-Applications-with-Javascript/tree/main/Projekti2b) of [Train schedule search](https://lalefal-junahaku.netlify.app{:target="_blank"})
+Repo [Project 2b](https://github.com/Lalefal/Dynamic-Web-Applications-with-Javascript/tree/main/Projekti2b) of [Train schedule search](https://lalefal-junahaku.netlify.app)
 
-Repo [Project 2a](https://github.com/Lalefal/Dynamic-Web-Applications-with-Javascript/tree/main/Projekti2) of <a href="https://lalefal-aikatauluhaku.netlify.app/"> Train schedule search Helsinki-Kerava</a>
+Repo [Project 2a](https://github.com/Lalefal/Dynamic-Web-Applications-with-Javascript/tree/main/Projekti2) of [Train schedule search Helsinki-Kerava](https://lalefal-aikatauluhaku.netlify.app/)
 
-Repo [Project 1](https://github.com/Lalefal/Dynamic-Web-Applications-with-Javascript/tree/main/Projekti1) of <a href="https://to00bl10projekti1.netlify.app/"> ToDo List</a>
+Repo [Project 1](https://github.com/Lalefal/Dynamic-Web-Applications-with-Javascript/tree/main/Projekti1) of [ToDo List](https://to00bl10projekti1.netlify.app/)
 
 
 Course Objectives: The student is able to
