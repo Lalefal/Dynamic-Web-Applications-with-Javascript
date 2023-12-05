@@ -2,11 +2,11 @@
 Assigments of Dynamic Web Applications with Javascript - course
 
 
-Project 2b <a href="https://lalefal-junahaku.netlify.app/"> Train schedule search</a>
+[Project 2b](https://github.com/Lalefal/Dynamic-Web-Applications-with-Javascript/tree/main/Projekti2b) <a href="https://lalefal-junahaku.netlify.app/"> Train schedule search</a>
 
-Project 2a <a href="https://lalefal-aikatauluhaku.netlify.app/"> Train schedule search Helsinki-Kerava</a>
+[Project 2a](https://github.com/Lalefal/Dynamic-Web-Applications-with-Javascript/tree/main/Projekti2) <a href="https://lalefal-aikatauluhaku.netlify.app/"> Train schedule search Helsinki-Kerava</a>
 
-Project 1 <a href="https://to00bl10projekti1.netlify.app/"> ToDo List</a>
+[Project 1](https://github.com/Lalefal/Dynamic-Web-Applications-with-Javascript/tree/main/Projekti1) <a href="https://to00bl10projekti1.netlify.app/"> ToDo List</a>
 
 
 Course Objectives: The student is able to
