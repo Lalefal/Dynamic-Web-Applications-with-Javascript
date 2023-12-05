@@ -1,4 +1,4 @@
-# Dynamic Web Applications with Javascript
+# Dynamic Web Applications with JavaScript
 Assigments of Dynamic Web Applications with Javascript - course
 
 
@@ -14,3 +14,10 @@ Course Objectives: The student is able to
 - compare the features, benefits and applicability of major client-side web technologies available in the market
 - set up a development environment for implementing Javascript based web applications
 - design, develop and implement dynamic and interactive web applications using Javascript based technologies
+
+  Course content:
+  - Basics of JavaScript
+  - Storing of data in the browser (SessionStorage and LocalStorage)
+  - DOM scripting and handling of forms (FORMs)
+  - AJAX
+  - jQuery
